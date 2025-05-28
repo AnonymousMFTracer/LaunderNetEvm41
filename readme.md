@@ -6,7 +6,7 @@ In total, LaunderNetEvm41 contains 1,939 accounts involved in money laundering a
 For clear visulization (`visual/` in each directory) and easy navigation, the laundering cases have been grouped into five clusters based on key factors—underlying crime, victim entity, number of laundering addresses, relationship to the top-level incident, and overlap among downstream addresses.
 Each cluster is stored in a separate directory within this repository.
 
-Within each directory, a CSV file named `flow records.csv` contains all illicit fund flow entries associated with the corresponding cluster. To support easier inspection and analysis, these flow records are pre-sorted by timestamp.
+Within each directory, a CSV file named `flow records.csv` contains all illicit fund flow entries associated with the corresponding cluster. To support easier inspection and analysis, these flow records are pre-sorted by timestamp. The terminal addresses $V_\mathrm{t}$, indicating where the illicit money ultimately flows, are listed in the file named `terminal addresses.csv`. The source addresses $A_\mathrm{vic}$ are listed in the file `source addresses.csv`.
 
 Each row in the CSV includes the following main fields:
 
