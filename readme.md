@@ -1,5 +1,5 @@
 ### Overview
-This is an anonymous repository publicly releasing the dataset LaunderNetEvm41 contributed by the paper *"Shedding Light on Shadows: Automatically Tracing Illicit Money Flows on EVM-Compatible Chains"* .
+This is an anonymous repository publicly releasing the dataset LaunderNetEvm41 contributed by the paper *Shedding Light on Shadows: Automatically Tracing Illicit Money Flows on EVM-Compatible Chains* .
 The Github account and repository do not contain any author information.
 
 In total, LaunderNetEvm41 contains 1,939 accounts involved in money laundering activities and 6,701 detailed illicit fund flow records. collectively covering over US $125 million in stolen assets.
