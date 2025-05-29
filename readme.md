@@ -3,10 +3,11 @@ This is an anonymous repository publicly releasing the dataset LaunderNetEvm41 c
 The Github account and repository do not contain any author information.
 
 In total, LaunderNetEvm41 contains 1,939 accounts involved in money laundering activities and 6,701 detailed illicit fund flow records. collectively covering over US $125 million in stolen assets.
-For clear visulization (`visual/` in each directory) and easy navigation, the laundering cases have been grouped into five clusters based on key factors—underlying crime, victim entity, number of laundering addresses, relationship to the top-level incident, and overlap among downstream addresses.
-Each cluster is stored in a separate directory within this repository.
+The dataset is located in the root directory. The CSV file named `flow records.csv` contains all illicit fund flows included in the dataset. In addition, `source address.csv` and `terminal address.csv` list all source addresses $A_\mathrm{vic}$ and terminal addresses $V_\mathrm{terminal}$, respectively.
 
-Within each directory, a CSV file named `flow records.csv` contains all illicit fund flow entries associated with the corresponding cluster. To support easier inspection and analysis, these flow records are pre-sorted by timestamp. The terminal addresses $V_\mathrm{t}$, indicating where the illicit money ultimately flows, are listed in the file named `terminal addresses.csv`. The source addresses $A_\mathrm{vic}$ are listed in the file `source addresses.csv`.
+To facilitate clearer visualization (`visual/` folders in each directory) and easy navigation of laundering activities, we further categorize the laundering cases into five clusters. This categorization is based on factors such as the associated victims, the number of laundering addresses, the overarching criminal incidents, and the degree of downstream address overlap. Each cluster is stored in a separate directory within the repository.
+
+Within each directory, a CSV file named `flow records.csv` contains all illicit fund flow entries associated with the corresponding cluster. To support easier inspection and analysis, these flow records are pre-sorted by timestamp. The terminal addresses $V_\mathrm{terminal}$, indicating where the illicit money ultimately flows, are listed in the file named `terminal addresses.csv`. The source addresses $A_\mathrm{vic}$ are listed in the file `source addresses.csv`.
 
 Each row in the CSV includes the following main fields:
 
@@ -22,7 +23,7 @@ The transaction hash can be used with public blockchain explorers to further exa
 
 ### How is the dataset created ? (Dataset Construction Methodology)
 
-The dataset was collaboratively curated by a team of seven experts, including two members from our author group, three professionals from leading blockchain security firms, and two domain specialists from the broader security community. Each expert has at least one year of hands-on experience in tracking crypto-related cybercrime.
+The dataset was collaboratively curated by a team of seven experts, including two members from our author group, three professionals from leading blockchain security firms (For anonymity, we will disclose the firm names later.), and two domain specialists from the broader security community. Each expert has at least one year of hands-on experience in tracking crypto-related cybercrime.
 
 The dataset encompasses distinct types of real-world cybercrime incidents involving a total of approximately \$125 million USD in illicit funds. These cases were carefully selected to cover a broad range of laundering behaviors and adversarial techniques employed by different attacker groups, allowing to test the robustness and real-world applicability of tracing systems.
 
@@ -89,11 +90,11 @@ In the appendix, we provide detailed analyses of some real-world cybercrime inci
 
 |                     Cybercrime Incidents                     |         Time          |  Money Involved   | Address | Records |
 | :----------------------------------------------------------: | :-------------------: | :---------------: | :-----: | :-----: |
-| [TxPhish (54M phishing on vault)](https://x.com/BlockSecTeam/status/1826200855827390652) | Aug. 2024 - Sep. 2024 | \$54$\mathrm{M}$  |   151   |   292   |
-| [LIFI (LI.FI Hack)](https://revoke.cash/exploits/lifi-2024?chainId=1) | Jul. 2024 - Sep. 2024 | \$$11\mathrm{M}$  |   93    |   135   |
-| [Atomic (Atomic Wallet Hack)](https://atomicwallet.io/blog/articles/june-3rd-event-statement) | Jun. 2023 - Jul. 2023 | \$$10\mathrm{M}$  |   389   |  1080   |
-| [HB (Harmony Bridge Hack)](https://x.com/zachxbt/status/1619489550233133056) | Jan. 2023 - Feb. 2023 | \$$50\mathrm{M}$  |   469   |  3887   |
-| [XScam (Discord & X Scam)](https://zachxbt.mirror.xyz/svL1N4xPLX5nXHr6Cw4KLsjRtaYHxm4MAqmFy6zx3cw) | Jun. 2022 - Nov. 2022 | \$$583\mathrm{k}$ |   837   |  1307   |
+| [TxPhish (54M phishing on vault)](https://x.com/BlockSecTeam/status/1826200855827390652) | Aug. 2024 - Sep. 2024 | \$ $54\mathrm{M}$  |   151   |   292   |
+| [LIFI (LI.FI Hack)](https://revoke.cash/exploits/lifi-2024?chainId=1) | Jul. 2024 - Sep. 2024 | \$ $11\mathrm{M}$  |   93    |   135   |
+| [Atomic (Atomic Wallet Hack)](https://atomicwallet.io/blog/articles/june-3rd-event-statement) | Jun. 2023 - Jul. 2023 | \$ $10\mathrm{M}$  |   389   |  1080   |
+| [HB (Harmony Bridge Hack)](https://x.com/zachxbt/status/1619489550233133056) | Jan. 2023 - Feb. 2023 | \$ $50\mathrm{M}$  |   469   |  3887   |
+| [XScam (Discord & X Scam)](https://zachxbt.mirror.xyz/svL1N4xPLX5nXHr6Cw4KLsjRtaYHxm4MAqmFy6zx3cw) | Jun. 2022 - Nov. 2022 | \$ $583\mathrm{k}$ |   837   |  1307   |
 
 ### Appendix: Incident Annotation — TxPhish
 
@@ -148,7 +149,7 @@ To avoid drawing excessive attention from large transfer amounts, the perpetrato
 
 ##### Case Background
 
-On July 16, 2024, [Li.Fi](https://x.com/lifiprotocol), a cross-chain bridge and DEX aggregator, experienced a significant security breach that exploited the [Li.Fi Diamond Contract](https://etherscan.io/address/0x1231deb6f5749ef6ce6943a275a1d3e7486f4eae). Various stable tokens and other assets of roughly \$$11.6\mathrm{M}$ were stolen from users. The attacker was able to drain funds from users who had granted infinite approvals to the attacked contract. 
+On July 16, 2024, [Li.Fi](https://x.com/lifiprotocol), a cross-chain bridge and DEX aggregator, experienced a significant security breach that exploited the [Li.Fi Diamond Contract](https://etherscan.io/address/0x1231deb6f5749ef6ce6943a275a1d3e7486f4eae). Various stable tokens and other assets of roughly \$ $11.6\mathrm{M}$ were stolen from users. The attacker was able to drain funds from users who had granted infinite approvals to the attacked contract. 
 
 - Attacker’s Address: [0x8b3cb6bf982798fba233bca56749e22eec42dcf3](https://etherscan.io/address/0x8b3cb6bf982798fba233bca56749e22eec42dcf3)
 - Vulnerable Contract: [0x1231deb6f5749ef6ce6943a275a1d3e7486f4eae](https://etherscan.io/address/0x1231deb6f5749ef6ce6943a275a1d3e7486f4eae)
@@ -158,29 +159,29 @@ The vulnerability was in the [function](https://etherscan.io/address/0xf28a35237
 
 ##### Brief Money Flow Analysis
 
-On July 16, 2024, the attacker initiated nearly one hundred [transactions](https://etherscan.io/tokentxns?a=0x8b3cb6bf982798fba233bca56749e22eec42dcf3&p=4) exploiting the arbitrary call vulnerability, transferring approximately \$$11$ million worth of stable tokens (USDT, USDC, DAI) to Address [0x8b3c](https://etherscan.io/address/0x8b3cb6bf982798fba233bca56749e22eec42dcf3) within 30 minutes. Almost all siphoned stable tokens were then quickly swapped for the Ethereum native token ETH. The DEX utilized by the attacker included Uniswap, Metamask Swap, among others. Swap transaction examples: [0xdf9b](https://etherscan.io/tx/0xdf9b2b855e5a55f4add1b95f29f4c2be6917560c30e0de11ea55270eb711886e), [0x11d](https://etherscan.io/tx/0x11ddeef2d279de82717272301d6f6e08795a8ac83b90972c71761e015a9c644c), [0xb4a4](https://etherscan.io/tx/0xb4a4cb9084043b6fe2d789de51d6a15b6ce321cb6334ca033b5824562b2f5904). 
+On July 16, 2024, the attacker initiated nearly one hundred [transactions](https://etherscan.io/tokentxns?a=0x8b3cb6bf982798fba233bca56749e22eec42dcf3&p=4) exploiting the arbitrary call vulnerability, transferring approximately \$ $11$ million worth of stable tokens (USDT, USDC, DAI) to Address [0x8b3c](https://etherscan.io/address/0x8b3cb6bf982798fba233bca56749e22eec42dcf3) within 30 minutes. Almost all siphoned stable tokens were then quickly swapped for the Ethereum native token ETH. The DEX utilized by the attacker included Uniswap, Metamask Swap, among others. Swap transaction examples: [0xdf9b](https://etherscan.io/tx/0xdf9b2b855e5a55f4add1b95f29f4c2be6917560c30e0de11ea55270eb711886e), [0x11d](https://etherscan.io/tx/0x11ddeef2d279de82717272301d6f6e08795a8ac83b90972c71761e015a9c644c), [0xb4a4](https://etherscan.io/tx/0xb4a4cb9084043b6fe2d789de51d6a15b6ce321cb6334ca033b5824562b2f5904). 
 
 An example of the fund flow within a swap transaction [0x8e27](https://etherscan.io/tx/0x8e27acf21089de72cd927e2efc44d99af9494d56c21fd49eaf0c5b7e56e7316e) interacting with [Metamask Swap Spender](https://etherscan.io/address/0x74de5d4fcbf63e00296fd95d33236b9794016631). The attacker swapped the illegally acquired 333,258 USDT into 97.16 ETH.
 
-![](E:misc/LIFI1.png)
+![](misc/LIFI1.png)
 
 Within two hours of the attack, all the stolen assets were transferred to downstream addresses controlled by the attacker and nothing is left in the original attack address. There are a total of 32 downstream addresses directly connected to Address [0x8b3c](https://etherscan.io/address/0x8b3cb6bf982798fba233bca56749e22eec42dcf3) (i.e., one hop away from the original attack address). Among these, 15 addresses received only 0.1 ETH from the attack address. As of October 22, 2024, the ETH held by these 15 addresses has not been transferred out. The remaining addresses have processed the rest of the large amounts of illicit funds.
 
 Part of the fund flows from the victim addresses to the downstream addresses controlled by the attacker: 
 
-![](E:misc/LIFI2.png)
+![](misc/LIFI2.png)
 
 After transferring the illicit funds to the downstream addresses one hop away from Address [0x8b3c](https://etherscan.io/address/0x8b3cb6bf982798fba233bca56749e22eec42dcf3), the attacker began further moving the funds in batches. The transfer (laundering) process lasted for nearly three months. Almost all of the illicit funds were finally moved to [Tornado Cash](https://etherscan.io/address/0xd90e2f925da726b50c4ed8d0fb90ad053324f31b) (99.9%), and a small portion were sent to the exchange [eXch](https://etherscan.io/address/0xf1da173228fcf015f43f3ea15abbb51f0d8f1123) for direct cash-out. There were totally 114 transactions that the attacker used to interact with the [Tornado Cash Router](https://etherscan.io/address/0xd90e2f925da726b50c4ed8d0fb90ad053324f31b). Examples of transactions moving illicit gains to Tornado Cash: [0x07de](https://etherscan.io/tx/0x07dec7b53ed73e310757b9cc4d73abac6726f867a68a4910082b59ce224a5a6e), [0xfe82](https://etherscan.io/tx/0xfe82ce08803579edd2ad69f7058cf52310b231890ec156ef5dcd046b5b296d03), [0x6a47](https://etherscan.io/tx/0x6a47684a769e4ac476506d245137839013e4526b437011d543be45886bc3713f), [0x8ea6](https://etherscan.io/tx/0x8ea6ca1047fd0a8cecafb38bb10a1029f82ef88932c1779de6b2a2ef5580d65e). Examples of transaction moving illicit gains to eXch: [0xaa89](https://etherscan.io/tx/0xaa89e7ab86da0f57640c6b40186f41d9a074c4f365cde6541965c1c908d7ded9), [0x7e65](https://etherscan.io/tx/0x7e656b657609910ed45590cc855738839e44b7e0589e9e5568991d8b5ae2c498), [0x8572](https://etherscan.io/tx/0x8572fa167f89cdc65a8cbe5526b04024d372bd9b2ec7f9f161fbf08c71dd7f33), [0x625c](https://etherscan.io/tx/0x625c6c15cad716f205ed2c3d67fc91b5893f234dacf43dffa8b899940f08917a), [0x2dd2](https://etherscan.io/tx/0x2dd2dfda6c8db4372b39bb902f806a741b451eb38ab9d9dd0161532e69465972), [0xda71](https://etherscan.io/tx/0xda715e9430bd82a40fb3b15caa7bbf4e51d00a11e6bf93f0c2c777a1689503ea).
 
 A part of the fund flows from layer2 addresses (2 hops away from the original attack address [0x8b3c](https://etherscan.io/address/0x8b3cb6bf982798fba233bca56749e22eec42dcf3)) to layer4 addresses:
 
-![](E:misc/LIFI5.png)
+![](misc/LIFI5.png)
 
-The first large-scale batch of transfers occurred within the first week following the attack, between July 16 and July 22. The attacker transferred approximately \$$500\mathrm{k}$ worth of illicit assets from Address [0x6a6d](https://etherscan.io/address/0x6a6df7cf485fdc6e6f7d4a8b818e1eacc31e664e) to Tornado Cash. The attacker's transfer of illicit funds exhibited distinct characteristics: they moved the funds to downstream addresses that were far away from the attack address (high-risk address), gradually funneling a portion to Tornado Cash. In the first batch, the longest transfer path reached up to *20 hops*. The attacker utilized extremely deep laundering path to obscure the illicit money flows. Between August and October, the remaining illicit funds were gradually transferred to Tornado Cash in transfer batches with the same characteristics.
+The first large-scale batch of transfers occurred within the first week following the attack, between July 16 and July 22. The attacker transferred approximately \$ $500\mathrm{k}$ worth of illicit assets from Address [0x6a6d](https://etherscan.io/address/0x6a6df7cf485fdc6e6f7d4a8b818e1eacc31e664e) to Tornado Cash. The attacker's transfer of illicit funds exhibited distinct characteristics: they moved the funds to downstream addresses that were far away from the attack address (high-risk address), gradually funneling a portion to Tornado Cash. In the first batch, the longest transfer path reached up to *20 hops*. The attacker utilized extremely deep laundering path to obscure the illicit money flows. Between August and October, the remaining illicit funds were gradually transferred to Tornado Cash in transfer batches with the same characteristics.
 
 An example of a transfer batch moving funds from Address [0x8e85](https://etherscan.io/address/0x8e85eace2fa757c1d97c5ebfb8b0622e5f23c5a1) (one hop from [0x8b3c](https://etherscan.io/address/0x8b3cb6bf982798fba233bca56749e22eec42dcf3)) to the Tornado Cash Router: 
 
-![](E:misc/LIFI0.png)
+![](misc/LIFI0.png)
 
 As the figure illustrates, between August 13 and August 16, 2024, the attacker gradually transferred 206 ETH to Tornado Cash over a 12-hop path. At Address [0xe9f7](https://etherscan.io/address/0xe9f7cd0c410257850324d86536bd165cf4306e80), the attacker split 204 ETH into two transactions: 100 ETH was sent to Tornado Cash, while 104 ETH was forwarded to further laundering addresses. This splitting pattern was consistent throughout the entire transfer process. That is, the attacker used a new, deeper address with each interaction involving Tornado Cash.
 
