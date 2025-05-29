@@ -22,7 +22,7 @@ The transaction hash can be used with public blockchain explorers to further exa
 
 ### How is the dataset created ? (Dataset Construction Methodology)
 
-The dataset was collaboratively curated by a team of seven experts, including two members from our author group, three professionals from leading blockchain security firms, and two domain specialists from the broader security community. Each expert has at least one year of hands-on experience in tracking crypto-related cybercrime.
+The dataset was collaboratively curated by a team of seven experts, including two members from our author group, three professionals from leading blockchain security firms (For anonymity, we will disclose the firm names later.), and two domain specialists from the broader security community. Each expert has at least one year of hands-on experience in tracking crypto-related cybercrime.
 
 The dataset encompasses distinct types of real-world cybercrime incidents involving a total of approximately \$125 million USD in illicit funds. These cases were carefully selected to cover a broad range of laundering behaviors and adversarial techniques employed by different attacker groups, allowing to test the robustness and real-world applicability of tracing systems.
 
