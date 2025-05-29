@@ -5,21 +5,21 @@ The Github account and repository do not contain any author information.
 In total, LaunderNetEvm41 contains 1,939 accounts involved in money laundering activities and 6,701 detailed illicit fund flow records. collectively covering over US $125 million in stolen assets.
 The dataset is located in the root directory. The CSV file named `flow records.csv` contains all illicit fund flows included in the dataset. In addition, `source address.csv` and `terminal address.csv` list all source addresses $A_\mathrm{vic}$ and terminal addresses $V_\mathrm{terminal}$, respectively.
 
-To facilitate clearer visualization (`visual/` folders in each directory) and easy navigation of laundering activities, we further categorize the laundering cases into five clusters. This categorization is based on factors such as the associated victims, the number of laundering addresses, the overarching criminal incidents, and the degree of downstream address overlap. Each cluster is stored in a separate directory within the repository.
-
-Within each directory, a CSV file named `flow records.csv` contains all illicit fund flow entries associated with the corresponding cluster. To support easier inspection and analysis, these flow records are pre-sorted by timestamp. The terminal addresses $V_\mathrm{terminal}$, indicating where the illicit money ultimately flows, are listed in the file named `terminal addresses.csv`. The source addresses $A_\mathrm{vic}$ are listed in the file `source addresses.csv`.
-
 Each row in the CSV includes the following main fields:
 
-- **TxHash**: the transaction hash that triggered the illicit transfer
+- **TxHash**: the hash of the transaction that triggered the illicit fund transfer
 - **From**: the source address of the fund transfer
 - **From_label**: the label of the source address indicating its on-chain character (service/laundering layer/endpoints/...)
 - **To**: the destination address of the fund transfer
 - **To_label**: the label of the destination address
 - **Value_in_USD**: the transferred amount in U.S. dollars, rounded to two decimal places
-- $\dots$
+- **Timestamp**: the timestamp when the transfer occurred
 
 The transaction hash can be used with public blockchain explorers to further examine the details of each illicit transaction.
+
+To facilitate clearer visualization (SVG files in the `visual/` folder of each directory) and easy navigation of laundering activities, we further categorize the laundering cases into five clusters. This categorization is based on factors such as the associated victims, the number of laundering addresses, the overarching criminal incidents, and the degree of downstream address overlap. Each cluster is stored in a separate directory within the repository.
+
+Within each directory, a CSV file named `flow records.csv` contains all illicit fund flow entries associated with the corresponding cluster. To support easier inspection and analysis, these flow records are pre-sorted by timestamp. The terminal addresses $V_\mathrm{terminal}$, indicating where the illicit money ultimately flows, are listed in the file named `terminal addresses.csv`. The source addresses $A_\mathrm{vic}$ are listed in the file `source addresses.csv`. *All the same as the csv files in the root directory.*
 
 ### How is the dataset created ? (Dataset Construction Methodology)
 
@@ -86,7 +86,7 @@ In the appendix, we provide detailed analyses of some real-world cybercrime inci
 
 *Some of the included figures were generated using the [MetaSleuth](https://metasleuth.io/) platform and may contain its watermark. These watermarks are automatically added by the tool and are **not** related to the paper authors or dataset contributors.*
 
-### Incidents Overview
+### Top-level Incidents Overview
 
 |                     Cybercrime Incidents                     |         Time          |  Money Involved   | Address | Records |
 | :----------------------------------------------------------: | :-------------------: | :---------------: | :-----: | :-----: |
