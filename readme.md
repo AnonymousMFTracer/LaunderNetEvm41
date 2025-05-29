@@ -3,10 +3,11 @@ This is an anonymous repository publicly releasing the dataset LaunderNetEvm41 c
 The Github account and repository do not contain any author information.
 
 In total, LaunderNetEvm41 contains 1,939 accounts involved in money laundering activities and 6,701 detailed illicit fund flow records. collectively covering over US $125 million in stolen assets.
-For clear visulization (`visual/` in each directory) and easy navigation, the laundering cases have been grouped into five clusters based on key factors—underlying crime, victim entity, number of laundering addresses, relationship to the top-level incident, and overlap among downstream addresses.
-Each cluster is stored in a separate directory within this repository.
+The dataset is located in the root directory. The CSV file named `flow records.csv` contains all illicit fund flows included in the dataset. In addition, `source address.csv` and `terminal address.csv` list all source addresses $A_\mathrm{vic}$ and terminal addresses $V_\mathrm{terminal}$, respectively.
 
-Within each directory, a CSV file named `flow records.csv` contains all illicit fund flow entries associated with the corresponding cluster. To support easier inspection and analysis, these flow records are pre-sorted by timestamp. The terminal addresses $V_\mathrm{t}$, indicating where the illicit money ultimately flows, are listed in the file named `terminal addresses.csv`. The source addresses $A_\mathrm{vic}$ are listed in the file `source addresses.csv`.
+To facilitate clearer visualization (`visual/` folders in each directory) and easy navigation of laundering activities, we further categorize the laundering cases into five clusters. This categorization is based on factors such as the associated victims, the number of laundering addresses, the overarching criminal incidents, and the degree of downstream address overlap. Each cluster is stored in a separate directory within the repository.
+
+Within each directory, a CSV file named `flow records.csv` contains all illicit fund flow entries associated with the corresponding cluster. To support easier inspection and analysis, these flow records are pre-sorted by timestamp. The terminal addresses $V_\mathrm{terminal}$, indicating where the illicit money ultimately flows, are listed in the file named `terminal addresses.csv`. The source addresses $A_\mathrm{vic}$ are listed in the file `source addresses.csv`.
 
 Each row in the CSV includes the following main fields:
 
