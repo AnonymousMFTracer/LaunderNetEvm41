@@ -29,6 +29,12 @@ The dataset encompasses distinct types of real-world cybercrime incidents involv
 
 The construction process began with the collection of victim addresses and attack transaction hashes, primarily sourced from publicly available incident reports published by affected parties and security communities. These sources served as the origin points for tracing the downstream movement of stolen assets. Experts utilized a combination of tools and platforms—such as Etherscan [1], Phalcon, Otterscan [2], and self-hosted full nodes—to gather on-chain transactional data and token transfer events.
 
+In curating cases from cybercrime incidents for our dataset, we applied three selection criteria to ensure soundness, persuasiveness, and cross-verifiability:
+- *Verified sources.* The selected incidents must include verifiable evidence, such as official statements from the victim entity or incident reports published by reputable security community experts, ensuring the authenticity and transparency.
+- *Diverse coverage.* The cases must originate from multiple independent criminal groups and span different types of cybercrimes, enabling us to test the generality, robustness, and practical applicability of tracing systems.
+- *Cross-validation support.* Each of the selected incidents must have at least one fund-tracing report published by other security community experts, allowing cross-checking of our dataset contents and enabling readers to validate the dataset themselves.
+Finally, we constructed the dataset based on a set of cybercrime incidents from 2022 to 2024 that meet the above criteria.
+
 The tracing process covered all types of fungible tokens, including native tokens and ERC-20 tokens, ensuring comprehensive coverage of the illicit asset flow. Experts analyzed transactions on a per-transaction basis. For each address identified as holding illicit funds, all subsequent outbound transactions were examined to determine how the assets were redistributed. These transactions were categorized into three general patterns:
 
 1. *Transactions to EOAs*: If the `to` address was an externally owned account (EOA), resulting in a native token transfer, the receiving address was marked as a potential downstream recipient and added to the pending analysis queue.
